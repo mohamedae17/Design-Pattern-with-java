@@ -16,14 +16,11 @@ public class JavaApplication19 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GetPlanFactory PlanFactory = new GetPlanFactory();
-        String planName = "domesticPlan";
-        Plan p = PlanFactory.getPlan(planName);
-        int units = 6;
+        Builder b = new BigMacMealBuilder();
+        Cashier macCashier = new Cashier(b);
         
-        System.out.print("Bill amount for"+planName+"of"+units+"units is :");
-        p.getRate();
-        p.calculateBill(units);
+        macCashier.orderMeal();
+        System.out.println(macCashier.getOrderedMeal().toString());
     }
     
 }
