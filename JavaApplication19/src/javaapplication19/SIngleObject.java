@@ -9,11 +9,16 @@ package javaapplication19;
  * @author DELL
  */
 public class SIngleObject {
-    private static SIngleObject instance = new SIngleObject();
+    private static SIngleObject instance;
     
     private SIngleObject(){}
     
     public static SIngleObject getInstance(){
+              if(instance == null)
+        {
+           instance = new SIngleObject();
+        }
+
         return instance;
     }
     
