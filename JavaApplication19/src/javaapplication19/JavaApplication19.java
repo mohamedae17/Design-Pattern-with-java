@@ -4,6 +4,7 @@
  */
 package javaapplication19;
 
+import Singelton.Counter;
 import java.util.Scanner;
 
 /**
@@ -16,7 +17,13 @@ public class JavaApplication19 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Counter objA = Counter.getInstance();
+        objA.addone();
+        Counter objB = Counter.getInstance();
+        objB.addone();
+        objB.addone();
+        System.out.println("Counter A is " + objA.counter);
+        System.out.println("Counter B is " + objB.counter);
     }
     
 }
