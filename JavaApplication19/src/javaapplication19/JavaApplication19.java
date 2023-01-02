@@ -16,11 +16,7 @@ public class JavaApplication19 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int x1 = 10 , y1 = 20;
-        int x2 = 30 , y2 = 60;
         
-        Shape shape = new RecAdapter(new LegacyRectangle());
-        shape.draw(x1, y1, x2, y2);
     }
     
 }
